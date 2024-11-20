@@ -1,0 +1,171 @@
+body, h1, h2, p, nav, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat';
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Обеспечивает минимальную высоту страницы */
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(33, 30, 30);
+    padding: 20px 20px;
+    align-items: center;
+}
+
+header h1 {
+    color: #33D04A;
+    text-transform: uppercase;
+    padding: 0px 50px;
+}
+
+nav {
+    text-align: left;
+    margin-left: 60px;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    padding: 12px 20px;
+    border: 1px solid #33D04A; /* Цвет обводки */
+    border-radius: 7px;
+}
+
+nav a:hover {
+    background-color: #1443BB; /* Цвет фона при наведении */
+    border-color: #fff;
+}
+
+.hero {
+    background-image: url("хедер2.2.png");
+    background-size: cover; /* Устанавливаем фиксированный размер фона */
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 73vh;
+    text-align: left;
+    padding: 110px 70px;
+    line-height: 2.5em;
+    margin-top: 0; 
+}
+
+.hero .highlight {
+    color: #33D04A;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: 30px;
+}
+
+.hero p {
+    font-size: 17px;
+}
+
+.contact-button {
+    display: inline-block;
+    background-color: #f0f0f0;
+    color: #1443BB;
+    padding: 10px 10px;
+    margin-top: 12px;
+    text-decoration: none; /* Убираем подчеркивание */
+    border-radius: 15px;
+    font-size: 18px;
+    text-align: center;
+    box-shadow: 0 4px 10px #00000033;
+}
+
+.contact-button:hover {
+    background-color: #1443BB;
+    color: white;
+}
+
+.portfolio {
+    background-color: #f8f8f8;
+    color: #333;
+    padding: 0px 20px;
+    text-align: center;
+}
+
+.portfolio h2 {
+    font-size: 36px;
+    color: #33D04A; /* Цвет заголовка */
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+
+.portfolio-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: 20px;
+    width: 1460px;
+    height:640px ;
+    margin-bottom: 20px;
+    margin-left: 0px ;
+}
+
+.portfolio-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #767676c7;
+    overflow: hidden;
+    width: calc(33.333% - 20px); /* 3 карточки по горизонтали */
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.portfolio-item h3 {
+    font-size: 22px;
+    color: #33D04A;
+    margin-top: 15px;
+}
+
+.portfolio-item p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Медиазапросы для мобильных устройств */
+@media (max-width: 768px) {
+    .portfolio-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio-item {
+        width: 100%; /* Карточки занимают 100% ширины */
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-item h3 {
+        font-size: 20px;
+    }
+
+    .portfolio-item p {
+        font-size: 14px;
+    }
+}
